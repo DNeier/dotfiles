@@ -1,0 +1,102 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1720,
+               "width": 3150,
+               "x": 25,
+               "y": 55
+            },
+            "name": "The i3 thread (Page 47) / Applications & Desktop Environments / Arch Linux Forums - Chromium",
+            "percent": null,
+            "swallows": [
+               {
+               // "class": "^Chromium$",
+               // "instance": "^Chromium$",
+               // "title": "^The\\ i3\\ thread\\ \\(Page\\ 47\\)\\ \\/\\ Applications\\ \\&\\ Desktop\\ Environments\\ \\/\\ Arch\\ Linux\\ Forums\\ \\-\\ Chromium$",
+               // "transient_for": "^$",
+               // "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 604,
+                       "width": 975,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "Terminal - derrick@localhost:~",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                       // "class": "^Xfce4\\-terminal$",
+                       // "instance": "^xfce4\\-terminal$",
+                       // "title": "^Terminal\\ \\-\\ derrick\\@localhost\\:\\~$",
+                       // "transient_for": "^$",
+                       // "window_role": "^xfce4\\-terminal\\-1430265898\\-\\-1036519091$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 604,
+               "width": 975,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - hangups",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^Xfce4\\-terminal$",
+               // "instance": "^xfce4\\-terminal$",
+               // "title": "^Terminal\\ \\-\\ hangups$",
+               // "transient_for": "^$",
+               // "window_role": "^xfce4\\-terminal\\-1430265899\\-\\-481823048$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
