@@ -17,7 +17,7 @@ short_units yes
 # How strict should if_up be when testing an interface for being up?
 # The value is one of up, link or address, to check for the interface
 # being solely up, being up and having link or being up, having link
-# and an assigned IP address. 
+# and an assigned IP address.
 if_up_strictness address
 
 # Add spaces to keep things from moving about?  This only affects certain objects.
@@ -38,14 +38,11 @@ TEXT
 
 # JSON for i3bar
 
- [{ "full_text" : "${exec cat /home/derrick/.scoreboard_files/nba_scoreboard}", "color" : "\#ffffef"},
-  { "full_text" : "${exec cat /home/derrick/.scoreboard_files/mlb_scoreboard}", "color" : "\#ffffef"},
-	{ "full_text" : "${if_mpd_playing} ${mpd_smart} ${endif}", "color" : "\#ffffef"},
-	{ "full_text" : "${if_up wlp2s0}wlp2s0 ${addr wlp2s0}${endif}"},
+ [{ "full_text" : " ☀ ${exec sh /home/derrick/scripts/weather.sh 60657}"},
+	{ "full_text" : "${if_up wlp2s0}${addr wlp2s0}${endif}"},
   { "full_text" : "RAM ${memperc}%" , "color" :
-    ${if_match ${memperc}<90}"\#ffffef"${else}"\#dca3a3"${endif} },
-	{ "full_text" : "CPU1 ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'}C"},
-	{ "full_text" : "CPU2 ${cpu cpu2}% ${exec sensors | grep -m 1 "Core 1"|awk '{print $3}'}C"},
-	{ "full_text" : "BAT ${battery_percent}%" , "color" :
-	  ${if_match ${battery_percent}>15}${if_match ${battery_percent}>70}"\#7f9f7f"${else}"\#f0dfaf"${endif}${else}"\#dca3a3"${endif}},
-	{ "full_text" : "${time %a %m.%d.%y} ${time %l:%M%P}"}],
+  ${if_match ${memperc}<90}"\#d1d4e0"${else}"\#ee829f"${endif} },
+	{ "full_text" : "   ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'}"},
+	{ "full_text" : "   ${battery_percent}%" , "color" :
+	${if_match ${battery_percent}>15}${if_match ${battery_percent}>70}"\#d1d4e0"${else}"\#ffefcc"${endif}${else}"\#ee829f"${endif}},
+	{ "full_text" : "   ${time %a %m.%d.%y}   ${time %l:%M%P}"}],
