@@ -54,7 +54,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal 
 
-bindsym $mod+c exec chromium
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Shift+BackSpace exec i3lock-fancy
 bindsym	$mod+m exec xfce4-terminal -e ncmpcpp --hold
 
@@ -220,3 +220,4 @@ bar {
 exec --no-startup-id setxkbmap -option ctrl:swapcaps
 exec --no-startup-id feh --bg-scale $HOME/Images/ceystalhorizon.png
 exec --no-startup-id compton -b
+exec --no-startup-id xdotool behave_screen_edge --delay 750 top-right exec i3lock-fancy 
